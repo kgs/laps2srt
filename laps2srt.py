@@ -35,10 +35,10 @@ def main():
     laps.append(timedelta(seconds=float(lines[i].strip())))
 
   end = offset
-  for x in range(1, len(laps)):
+  for x in range(0, len(laps)):
     start = end
     end = start + laps[x]
-    write_record(x, start, end, laps[x])
+    write_record(x+1, start, end, laps[x])
 
 if __name__ == '__main__':
   main()
